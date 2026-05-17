@@ -5,6 +5,7 @@ description = "Lightweight OpenCS2 play vectorization and nearest-neighbor graph
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "duckdb>=1.4.0",
+    "huggingface-hub>=1.0.0",
     "numpy>=1.26.0",
     "pandas>=2.2.0",
     "pyarrow>=16.0.0",

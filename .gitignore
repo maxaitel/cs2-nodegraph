@@ -9,6 +9,7 @@ webui/dist/
 
 # Generated pipeline outputs
 outputs/
+data/
 
 # Local/editor noise
 .DS_Store
