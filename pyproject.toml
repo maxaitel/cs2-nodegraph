@@ -1,0 +1,14 @@
+[project]
+name = "opencs2-play-graph"
+version = "0.1.0"
+description = "Lightweight OpenCS2 play vectorization and nearest-neighbor graph builder."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "duckdb>=1.4.0",
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "pyarrow>=16.0.0",
+]
+
+[tool.uv]
+package = false

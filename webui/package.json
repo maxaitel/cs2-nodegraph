@@ -1,0 +1,20 @@
+{
+  "name": "opencs2-graph-webui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "import:data": "node scripts/import-data.js"
+  },
+  "dependencies": {
+    "cytoscape": "^3.33.1",
+    "lucide": "^0.468.0",
+    "papaparse": "^5.5.3"
+  },
+  "devDependencies": {
+    "vite": "^7.2.0"
+  }
+}

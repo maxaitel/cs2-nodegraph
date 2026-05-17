@@ -1,0 +1,15 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node / Vite
+webui/node_modules/
+webui/dist/
+
+# Generated pipeline outputs
+outputs/
+
+# Local/editor noise
+.DS_Store
+*.log

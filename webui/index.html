@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenCS2 Play Graph</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div>
+          <h1>OpenCS2 Play Graph</h1>
+          <div id="meta" class="meta">Loading graph data</div>
+        </div>
+        <div class="actions">
+          <button id="fit" class="icon-button" type="button" title="Fit graph" aria-label="Fit graph">
+            <i data-lucide="scan"></i>
+          </button>
+          <button id="reset" class="icon-button" type="button" title="Reset layout" aria-label="Reset layout">
+            <i data-lucide="rotate-ccw"></i>
+          </button>
+          <button id="export-png" class="icon-button" type="button" title="Export PNG" aria-label="Export PNG">
+            <i data-lucide="image-down"></i>
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="graph-panel">
+          <div class="toolbar">
+            <label class="search-box">
+              <i data-lucide="search"></i>
+              <input id="search" type="search" placeholder="Search map, weapon, tag, play id" />
+            </label>
+            <label class="select-box">
+              <span>Layout</span>
+              <select id="layout">
+                <option value="preset">Vector map</option>
+                <option value="cose">Force</option>
+                <option value="circle">Circle</option>
+                <option value="grid">Grid</option>
+              </select>
+            </label>
+            <label class="select-box">
+              <span>Flick</span>
+              <select id="flick-mode">
+                <option value="show" selected>Show</option>
+                <option value="relabel">Relabel</option>
+                <option value="hide">Hide</option>
+              </select>
+            </label>
+            <label class="range-box">
+              <span>Edges</span>
+              <input id="edge-strength" type="range" min="0" max="100" value="35" />
+            </label>
+          </div>
+          <div id="legend" class="legend"></div>
+          <div id="cy"></div>
+        </section>
+
+        <aside class="side-panel">
+          <section class="detail-section">
+            <h2>Play Viewer</h2>
+            <div id="play-viewer" class="empty-state">Select a play to load the POV video.</div>
+          </section>
+          <section class="detail-section">
+            <h2>Selection</h2>
+            <div id="selection" class="empty-state">Select a play.</div>
+          </section>
+          <section class="detail-section">
+            <h2>Groups</h2>
+            <div id="group-counts" class="counts"></div>
+          </section>
+          <section class="detail-section">
+            <h2>Run</h2>
+            <div id="run-info" class="kv"></div>
+          </section>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
